@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --color-red: rgb(190, 27, 27);
+  --color-green: rgb(41, 221, 41);
+  --color-blue: rgb(61, 142, 218);
+
+  --transitiion: 300ms ease;
+}
+
+button {
+  padding: 0.6rem;
+  border: 2px solid transparent;
+}
