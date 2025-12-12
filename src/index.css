@@ -4,6 +4,9 @@
   text-decoration: none;
   list-style: none;
 }
+body {
+  font-family: verdana, sans-serif, tahoma;
+}
 
 :root {
   --color-red: rgb(190, 27, 27);
@@ -16,4 +19,11 @@
 button {
   padding: 0.6rem;
   border: 2px solid transparent;
+  box-shadow: 2px 3px 2px gray;
+  border-radius: 1rem;
+}
+
+button:active {
+  transform: translateY(6px);
+  box-shadow: none;
 }
