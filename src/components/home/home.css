@@ -1,6 +1,12 @@
-#btnEdit {
+#btnAdd {
+  font-size: 20px;
+  font-weight: 600;
+  background: var(--color-green);
   float: right;
   margin-right: 12px;
+}
+#btnAdd:active {
+  background: var(--color-active2);
 }
 .entete {
   position: relative;
@@ -49,6 +55,16 @@ h5 {
   padding: 2rem;
   height: fit-content;
 }
+
+h5::after {
+  content: ":";
+  position: relative;
+  left: 3.5rem;
+}
+.text {
+  position: relative;
+  top: 0.7rem;
+}
 /* BOutons  */
 #editTaskBtn {
   background: var(--color-blue);
@@ -58,7 +74,17 @@ h5 {
   background: var(--color-red);
   width: fit-content;
 }
+#deleteTaskBtn:active {
+  background: var(--color-active1);
+}
+#editTaskBtn :active {
+  background: var(--color-active2);
+}
 
+.timeDiv {
+  position: relative;
+  left: 52rem;
+}
 .time {
   font-size: 12px;
   position: relative;
@@ -69,4 +95,84 @@ h5 {
 .btns {
   display: flex;
   height: 50px;
+}
+
+/* Phone Query */
+
+@media (max-width: 640px) {
+  body {
+    margin: 0 auto;
+    padding: 0 4px;
+  }
+  #btnAdd {
+    position: relative;
+    right: 6.7rem;
+    width: auto;
+    height: auto;
+    font-size: 13px;
+  }
+  p {
+    position: relative;
+    right: 1.8rem;
+  }
+  .search {
+    position: relative;
+    right: 3rem;
+    bottom: 1rem;
+  }
+  .searchBar {
+    width: 70%;
+  }
+  .afterEntete {
+    position: relative;
+    bottom: 4rem;
+    width: 68%;
+  }
+  fieldset {
+    width: auto;
+    height: auto;
+    position: relative;
+    right: 2.1rem;
+    /* padding-right: -10p; */
+  }
+  legend {
+    font-size: 16px;
+  }
+  .contenu > h5 {
+    position: relative;
+    right: 0.4rem;
+    width: auto;
+    background: var(--color-gray);
+    /* height: auto; */
+    padding: 0.7rem;
+  }
+  .contenu > h5::after {
+    content: ":";
+    position: relative;
+    left: 2rem;
+  }
+  .text {
+    font-size: 11px;
+    height: 30px;
+    overflow: hidden;
+    grid-template-columns: auto;
+    height: 80px;
+  }
+  #deleteTaskBtn,
+  #editTaskBtn {
+    width: fit-content;
+    padding: 0;
+    height: 22px;
+    font-size: 10px;
+  }
+  .timeDiv {
+    position: relative;
+    left: 2rem;
+    width: 90%;
+    top: 0.5rem;
+    font-size: 7px;
+  }
+  .time {
+    font-size: 5.4px;
+  }
 }

@@ -11,12 +11,12 @@ function Home() {
   const schema = `${hrs}:${mins}:${secs}`;
   return (
     <>
-      <button id="btnEdit">Modifer</button>
+      <button id="btnAdd">Ajouter ➕</button>
 
       <div className="entete">
         <p>Dossier</p>
 
-        <div>
+        <div className="search">
           <input
             className="searchBar"
             type="search"
@@ -34,14 +34,16 @@ function Home() {
             <fieldset>
               <legend>Liste de note</legend>
               <div className="contenu">
-                <h5>title</h5>:
-                <div>
+                <h5>title</h5>
+                <div className="timeDiv">
+                  <p className="time">{schema}</p>
+                </div>
+                <div className="text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Nostrum expedita deserunt, dolor accusamus sint maxime nihil
                   laborum, sed deleniti libero qui harum perspiciatis aut? Nam
                   sequi itaque dolore similique culpa?
                 </div>
-                <p className="time">{schema}</p>
                 {/* BOUTON OPTIONS */}
                 <div className="btns">
                   <button id="deleteTaskBtn">
