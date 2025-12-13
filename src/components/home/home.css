@@ -1,0 +1,64 @@
+#btnEdit {
+  float: right;
+  margin-right: 12px;
+}
+.entete {
+  position: relative;
+  top: 6.5rem;
+  font-size: 40px;
+}
+p {
+  font-weight: 300;
+}
+
+.searchBar {
+  width: 40%;
+  font-size: x-large;
+  border-radius: 0.3em;
+  padding: 3px;
+  position: relative;
+  left: 2rem;
+  top: 1rem;
+}
+
+.afterEntete {
+  position: relative;
+  top: 9rem;
+}
+hr {
+  position: relative;
+}
+
+h3 {
+  margin-top: 2px;
+}
+
+.contenu {
+  display: flex;
+}
+fieldset {
+  border-radius: 1rem;
+}
+legend {
+  font-size: x-large;
+  color: var(--color-gray);
+}
+h5 {
+  border-radius: 1rem;
+  background: var(--color-green);
+  padding: 2rem;
+  height: fit-content;
+}
+/* BOutons  */
+#editTaskBtn {
+  background: var(--color-blue);
+}
+
+#deleteTaskBtn {
+  background: var(--color-red);
+  width: fit-content;
+}
+
+.time {
+  font-size: 12px;
+}
