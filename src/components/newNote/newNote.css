@@ -1,3 +1,21 @@
+.one {
+  display: flex;
+}
+#retour {
+  background: var(--color-white);
+  height: 25px;
+  width: 23px;
+}
+.sign {
+  position: relative;
+  right: 0.7rem;
+  bottom: 0.6rem;
+  font-size: 20px;
+}
+#retour:active {
+  background: var(--color-active1);
+}
+
 #nomDeLaNote {
   font-size: x-large;
   width: fit-content;
@@ -22,7 +40,7 @@
 
 .textArea {
   width: 90%;
-  height: 350px;
+  height: 300px;
   padding: 12px;
   resize: none;
   border-radius: 11px;
@@ -37,4 +55,37 @@
   /* bottom: 1rem; */
   left: 25rem;
   font-size: 30px;
+}
+
+.actions {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Bouton */
+#import,
+#audio,
+#saved {
+  font-size: 20px;
+}
+
+#import {
+  background: var(--color-blue);
+}
+#import:active {
+  background: var(--color-active2);
+}
+
+#audio {
+  background: var(--color-red);
+}
+#audio:active {
+  background: var(--color-active1);
+}
+#saved {
+  background: var(--color-green);
+}
+#saved:active {
+  background: var(--color-green2);
 }

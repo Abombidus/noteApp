@@ -1,11 +1,27 @@
 import "./newNote.css";
 import { useState } from "react";
+import { AiFillAudio } from "react-icons/ai";
+import { FaArrowAltCircleLeft, FaFileImport } from "react-icons/fa";
+import { FaSave } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const NewNote = () => {
+  const navigate = useNavigate();
   const [active, setActive] = useState(false);
   return (
     <>
-      <h3>Nouvelle note</h3>
+      <div className="one">
+        <button
+          id="retour"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          <FaArrowAltCircleLeft className="sign" />
+        </button>
+
+        <h3>Nouvelle note</h3>
+      </div>
       <input
         onFocus={() => setActive(true)}
         onBlur={() => {
@@ -31,6 +47,18 @@ const NewNote = () => {
           className="textArea"
           placeholder=" Ajouter une note..."
         />
+      </div>
+
+      <div className="actions">
+        <button id="import">
+          <FaFileImport />
+        </button>
+        <button id="audio">
+          <AiFillAudio />
+        </button>
+        <button id="saved">
+          <FaSave />
+        </button>
       </div>
     </>
   );

@@ -1,11 +1,16 @@
 import NewNote from "../src/components/newNote/NewNote";
-// import Home from "../src/components/home/Home";
+import Home from "../src/components/home/Home";
+// import { Navigation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+
 function App() {
   return (
-    <div>
-      {/* <Home /> */}
-      <NewNote />
-    </div>
+    <>
+      <Routes>
+        <Route path="/new Note" element={<NewNote />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </>
   );
 }
 

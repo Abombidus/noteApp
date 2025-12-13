@@ -2,8 +2,10 @@ import React from "react";
 import { FaEdit } from "react-icons/fa";
 import { MdAutoDelete } from "react-icons/md";
 import "./home.css";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
   const now = new Date();
   const hrs = now.getHours();
   const mins = now.getMinutes();
@@ -11,7 +13,14 @@ function Home() {
   const schema = `${hrs}:${mins}:${secs}`;
   return (
     <>
-      <button id="btnAdd">Ajouter ➕</button>
+      <button
+        id="btnAdd"
+        onClick={() => {
+          navigate("/new Note");
+        }}
+      >
+        Ajouter ➕
+      </button>
 
       <div className="entete">
         <p>Dossier</p>
