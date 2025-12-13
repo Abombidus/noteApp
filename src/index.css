@@ -4,10 +4,6 @@
   text-decoration: none;
   list-style: none;
 }
-body {
-  background: rgb(238, 231, 231);
-  font-family: verdana, sans-serif, tahoma;
-}
 
 :root {
   --color-red: rgb(190, 27, 27);
@@ -23,6 +19,12 @@ body {
   --transitiion: 300ms ease;
 }
 
+body {
+  background: rgb(238, 231, 231);
+  font-family: verdana, sans-serif, tahoma;
+  transition: var(--transitiion);
+}
+
 button {
   padding: 0.6rem;
   border: 2px solid transparent;
@@ -34,4 +36,11 @@ button {
 button:active {
   transform: translateY(6px);
   box-shadow: none;
+}
+
+@media (max-width: 640px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
 }

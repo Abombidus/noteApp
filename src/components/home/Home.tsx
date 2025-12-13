@@ -55,6 +55,7 @@ function Home() {
                   </button>
                 </div>
               </div>
+              <hr className="diff" />
             </fieldset>
           </div>
         </div>

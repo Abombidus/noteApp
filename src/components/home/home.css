@@ -44,6 +44,7 @@ h3 {
 }
 fieldset {
   border-radius: 1rem;
+  padding-bottom: 0.4rem;
 }
 legend {
   font-size: x-large;
@@ -106,7 +107,7 @@ h5::after {
   }
   #btnAdd {
     position: relative;
-    right: 4.3rem;
+    right: 5.5rem;
     width: auto;
     height: auto;
     font-size: 13px;
@@ -122,6 +123,8 @@ h5::after {
   }
   .searchBar {
     width: 70%;
+    position: relative;
+    top: 2.6rem;
   }
   .afterEntete {
     position: relative;
@@ -132,7 +135,7 @@ h5::after {
     width: auto;
     height: auto;
     position: relative;
-    right: 2.1rem;
+    right: 2.7rem;
     /* padding-right: -10p; */
   }
   legend {
