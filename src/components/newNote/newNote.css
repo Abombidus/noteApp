@@ -12,9 +12,9 @@
   bottom: 0.6rem;
   font-size: 20px;
 }
-#retour:active {
+/* #retour:active {
   background: var(--color-active1);
-}
+} */
 
 #nomDeLaNote {
   font-size: x-large;
@@ -88,4 +88,49 @@
 }
 #saved:active {
   background: var(--color-green2);
+}
+
+@media (max-width: 640px) {
+  .actions {
+    position: relative;
+    right: 0.4rem;
+    top: 8rem;
+  }
+  .textAreaContainer {
+    position: relative;
+    right: 0.5rem;
+    top: 7rem;
+  }
+  .textArea::placeholder {
+    position: relative;
+    color: red;
+  }
+  .textArea {
+    width: 100%;
+  }
+  #nomDeLaNote {
+    position: relative;
+    top: 4rem;
+    left: 1rem;
+  }
+  .one {
+    position: relative;
+    top: 3rem;
+  }
+  .two {
+    position: relative;
+    top: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  #btnOk {
+    position: relative;
+    left: 1rem;
+    top: 4rem;
+  }
+
+  #retour {
+    position: relative;
+    right: 1.8rem;
+  }
 }

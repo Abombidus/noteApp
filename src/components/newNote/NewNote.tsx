@@ -8,6 +8,11 @@ import { useNavigate } from "react-router-dom";
 const NewNote = () => {
   const navigate = useNavigate();
   const [active, setActive] = useState(false);
+
+  function texte(value) {
+    const champ = document.querySelector("textArea");
+    console.log(champ.value);
+  }
   return (
     <>
       <div className="one">
@@ -22,24 +27,27 @@ const NewNote = () => {
 
         <h3>Nouvelle note</h3>
       </div>
-      <input
-        onFocus={() => setActive(true)}
-        onBlur={() => {
-          setActive(false);
-        }}
-        type="text"
-        id="nomDeLaNote"
-        placeholder="   ajouter un nom a la note...✍"
-      />
 
-      <button
-        id="btnOk"
-        style={{
-          background: active ? "var(--color-green)" : "var(--color-green2)",
-        }}
-      >
-        ✔
-      </button>
+      <div className="two">
+        <input
+          onFocus={() => setActive(true)}
+          onBlur={() => {
+            setActive(false);
+          }}
+          type="text"
+          id="nomDeLaNote"
+          placeholder="   ajouter un nom a la note...✍"
+        />
+
+        <button
+          id="btnOk"
+          style={{
+            background: active ? "var(--color-green)" : "var(--color-green2)",
+          }}
+        >
+          ✔
+        </button>
+      </div>
 
       <div className="textAreaContainer">
         <input
@@ -48,7 +56,6 @@ const NewNote = () => {
           placeholder=" Ajouter une note..."
         />
       </div>
-
       <div className="actions">
         <button id="import">
           <FaFileImport />
