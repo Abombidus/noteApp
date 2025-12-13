@@ -1,0 +1,40 @@
+#nomDeLaNote {
+  font-size: x-large;
+  width: fit-content;
+  border-radius: 0.4rem;
+  padding-left: 10px;
+  padding-bottom: 4px;
+}
+#nomDeLaNote::placeholder {
+  font-size: 15px;
+}
+
+#btnOk {
+  background: var(--color-green2);
+  height: 35px;
+}
+
+.textAreaContainer {
+  justify-content: center;
+  position: relative;
+  top: 3rem;
+}
+
+.textArea {
+  width: 90%;
+  height: 350px;
+  padding: 12px;
+  resize: none;
+  border-radius: 11px;
+  line-height: normal;
+  box-sizing: border-box;
+  vertical-align: text-top;
+  padding: 10px;
+}
+
+.textArea::placeholder {
+  position: relative;
+  /* bottom: 1rem; */
+  left: 25rem;
+  font-size: 30px;
+}
