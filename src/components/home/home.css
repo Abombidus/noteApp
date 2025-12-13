@@ -61,4 +61,12 @@ h5 {
 
 .time {
   font-size: 12px;
+  position: relative;
+  left: 7rem;
+  bottom: 1.5rem;
+}
+
+.btns {
+  display: flex;
+  height: 50px;
 }

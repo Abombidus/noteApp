@@ -41,11 +41,13 @@ function Home() {
                   laborum, sed deleniti libero qui harum perspiciatis aut? Nam
                   sequi itaque dolore similique culpa?
                 </div>
+                <p className="time">{schema}</p>
+                {/* BOUTON OPTIONS */}
                 <div className="btns">
-                  <p className="time">{schema}</p>
                   <button id="deleteTaskBtn">
                     <MdAutoDelete />
                   </button>
+
                   <button id="editTaskBtn">
                     <FaEdit />
                   </button>
