@@ -78,7 +78,7 @@ h5::after {
   background: var(--color-active1);
 }
 #editTaskBtn :active {
-  background: var(--color-active2);
+  background: var(--color-active3);
 }
 
 .timeDiv {
@@ -102,7 +102,7 @@ h5::after {
 @media (max-width: 640px) {
   body {
     margin: 0 auto;
-    padding: 0 4px;
+    padding: 0 16px;
   }
   #btnAdd {
     position: relative;
@@ -153,6 +153,8 @@ h5::after {
   }
   .text {
     font-size: 11px;
+    position: relative;
+    bottom: 3rem;
     height: 30px;
     overflow: hidden;
     grid-template-columns: auto;
