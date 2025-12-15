@@ -102,8 +102,9 @@
     top: 7rem;
   }
   .textArea::placeholder {
-    position: relative;
-    color: red;
+    /* float:left; */
+    position: absolute;
+    left: 1.5rem;
   }
   .textArea {
     width: 100%;

@@ -8,11 +8,9 @@ import { useNavigate } from "react-router-dom";
 const NewNote = () => {
   const navigate = useNavigate();
   const [active, setActive] = useState(false);
+  // const [task, setTask] = useState([]);
+  // const [newTask, setNewTask] = useState("");
 
-  function texte(value) {
-    const champ = document.querySelector("textArea");
-    console.log(champ.value);
-  }
   return (
     <>
       <div className="one">

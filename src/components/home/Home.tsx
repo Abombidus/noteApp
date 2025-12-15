@@ -16,7 +16,7 @@ function Home() {
       <button
         id="btnAdd"
         onClick={() => {
-          navigate("/new Note");
+          navigate("/newNote");
         }}
       >
         Ajouter ➕
@@ -64,7 +64,7 @@ function Home() {
                   </button>
                 </div>
               </div>
-              <hr className="diff" />
+              {/* <hr className="diff" /> */}
             </fieldset>
           </div>
         </div>
