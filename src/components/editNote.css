@@ -1,0 +1,24 @@
+@media (max-width: 640px) {
+  .editSave {
+    position: relative;
+    left: 8.5rem;
+    top: 8rem;
+  }
+}
+/*  */
+
+.editSave {
+  position: relative;
+  top: 3rem;
+  left: 35rem;
+}
+
+#editsaved {
+  /* background: rgb(10, 9, 9); */
+  background: var(--color-green);
+  font-size: 35px;
+  padding: 0;
+}
+#editsaved:active {
+  background: var(--color-green2);
+}

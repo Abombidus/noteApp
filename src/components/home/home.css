@@ -2,8 +2,12 @@
   font-size: 20px;
   font-weight: 600;
   background: var(--color-green);
-  float: right;
+  /* float: right; */
   margin-right: 12px;
+  position: fixed;
+  right: 2.1rem;
+  z-index: 1;
+  border: 2px solid transparent;
 }
 #btnAdd:active {
   background: var(--color-active2);
@@ -19,6 +23,7 @@ p {
 
 .searchBar {
   width: 40%;
+  height: 40%;
   font-size: x-large;
   border-radius: 0.3em;
   padding: 3px;
@@ -41,6 +46,16 @@ h3 {
 
 .contenu {
   display: flex;
+  padding-bottom: 1rem;
+}
+.contenu::after {
+  content: "";
+  width: 1%;
+  position: relative;
+  top: 2rem;
+  height: 1px;
+  color: black;
+  background: black;
 }
 fieldset {
   border-radius: 1rem;
@@ -64,11 +79,18 @@ h5::after {
 }
 .text {
   position: relative;
+  overflow: hidden;
+  padding-bottom: 1.5rem;
   top: 0.7rem;
 }
 /* Boutons  */
 #editTaskBtn {
   background: var(--color-blue);
+}
+
+.separation {
+  position: relative;
+  bottom: 1.2rem;
 }
 
 #deleteTaskBtn {
@@ -96,6 +118,11 @@ h5::after {
 .btns {
   display: flex;
   height: 50px;
+  background: rgb(221, 217, 217);
+  padding: 0.7rem;
+  border: 2px solid transparent;
+  border-radius: 23px;
+  position: relative;
 }
 
 /* Phone Query */
@@ -106,10 +133,12 @@ h5::after {
     padding: 0 16px;
   }
   #btnAdd {
-    position: relative;
-    left: 1.5rem;
-    width: auto;
+    position: fixed;
+    right: 0.5rem;
+    width: fit-content;
     height: auto;
+    z-index: 1;
+    border: 1px solid transparent;
     font-size: 13px;
   }
   p {
@@ -163,6 +192,18 @@ h5::after {
     grid-template-columns: auto;
     height: 80px;
   }
+
+  .btns {
+    background: rgb(192, 188, 189);
+    padding: 0;
+    position: relative;
+    top: 2.5rem;
+    height: 37px;
+  }
+  .separation {
+    position: relative;
+    top: 0.3rem;
+  }
   #deleteTaskBtn,
   #editTaskBtn {
     width: fit-content;
@@ -174,7 +215,7 @@ h5::after {
     position: relative;
     left: 8rem;
     width: 90%;
-    top: 0.3rem;
+    top: 1.9rem;
     font-size: 7px;
   }
   .time {

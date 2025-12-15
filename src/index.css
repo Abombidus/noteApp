@@ -16,7 +16,7 @@
   --color-active3: rgb(164, 177, 180);
   --color-black: rgb(34, 31, 31);
 
-  --transitiion: 300ms ease;
+  --transitiion: 100ms ease;
 }
 
 body {
