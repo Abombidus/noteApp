@@ -1,11 +1,35 @@
 @media (max-width: 640px) {
+  #retour {
+    position: relative;
+    top: 2.5rem;
+  }
+  /* body {
+    background: red;
+  } */
+  .textH3 {
+    position: relative;
+    top: 2.4rem;
+  }
+  #nomDeLaNote {
+    position: relative;
+    bottom: 2rem;
+  }
   .editSave {
     position: relative;
-    left: 8.5rem;
-    top: 8rem;
+  }
+  #editsaved {
+    position: relative;
+    right: 26.6rem;
+    top: 5rem;
   }
 }
 /*  */
+
+.textH3 {
+  position: relative;
+  left: 4rem;
+  top: 0.8rem;
+}
 
 .editSave {
   position: relative;

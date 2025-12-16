@@ -1,6 +1,11 @@
 .one {
   display: flex;
 }
+
+h3 {
+  position: relative;
+  left: 5rem;
+}
 #retour {
   background: var(--color-white);
   height: 25px;
@@ -18,6 +23,8 @@
 
 #nomDeLaNote {
   font-size: x-large;
+  position: relative;
+  top: 1.5rem;
   width: fit-content;
   border-radius: 0.4rem;
   padding-left: 10px;
@@ -30,6 +37,8 @@
 #btnOk {
   background: var(--color-green2);
   height: 35px;
+  position: relative;
+  top: 1.3rem;
 }
 
 .textAreaContainer {
@@ -61,6 +70,8 @@
   margin-top: 4rem;
   display: flex;
   justify-content: center;
+  position: relative;
+  right: 3.7rem;
 }
 
 /* Bouton */
@@ -96,6 +107,11 @@
     right: 0.4rem;
     top: 8rem;
   }
+  h3 {
+    position: relative;
+    left: 3rem;
+    top: 3rem;
+  }
   .textAreaContainer {
     position: relative;
     right: 0.5rem;
@@ -117,8 +133,9 @@
   }
   .one {
     position: relative;
-    top: 3rem;
+    /* top: 3.6rem; */
   }
+
   .two {
     position: relative;
     top: 1rem;
@@ -134,5 +151,6 @@
   #retour {
     position: relative;
     right: 1.8rem;
+    /* bottom: 3rem; */
   }
 }

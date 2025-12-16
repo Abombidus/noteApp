@@ -8,9 +8,15 @@ import { useNavigate } from "react-router-dom";
 const NewNote = () => {
   const navigate = useNavigate();
   const [active, setActive] = useState(false);
-  // const [task, setTask] = useState([]);
-  // const [newTask, setNewTask] = useState("");
+  const [titre, setTitre] = useState("");
+  const [champ, setChamp] = useState("");
 
+  function TakeNote() {
+    // e.preventDeafault();
+
+    console.log("titre:", titre);
+    console.log("champ:", champ);
+  }
   return (
     <>
       <div className="one">
@@ -22,9 +28,9 @@ const NewNote = () => {
         >
           <FaArrowAltCircleLeft className="sign" />
         </button>
-
-        <h3>Nouvelle note</h3>
       </div>
+
+      <h3>Nouvelle note</h3>
 
       <div className="two">
         <input
@@ -33,8 +39,12 @@ const NewNote = () => {
             setActive(false);
           }}
           type="text"
+          onChange={(e) => {
+            setTitre(e.target.value);
+          }}
+          value={titre}
           id="nomDeLaNote"
-          placeholder="   ajouter un nom a la note...✍"
+          placeholder="  Nom de la note...✍"
         />
 
         <button
@@ -48,12 +58,18 @@ const NewNote = () => {
       </div>
 
       <div className="textAreaContainer">
-        <input
-          type="text"
+        <textarea
+          onChange={(e) => {
+            setChamp(e.target.value);
+          }}
+          value={champ}
+          name="textArea"
           className="textArea"
-          placeholder=" Ajouter une note..."
-        />
+          id="textArea"
+          placeholder="Ajouter une note..."
+        ></textarea>
       </div>
+
       <div className="actions">
         <button id="import">
           <FaFileImport />
@@ -61,7 +77,7 @@ const NewNote = () => {
         <button id="audio">
           <AiFillAudio />
         </button>
-        <button id="saved">
+        <button id="saved" onClick={TakeNote}>
           <FaSave />
         </button>
       </div>

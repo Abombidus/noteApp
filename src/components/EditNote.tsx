@@ -18,27 +18,17 @@ function EditNote() {
           <FaArrowAltCircleLeft className="sign" />
         </button>
       </div>
+      <h3 className="textH3">Editer la note</h3>
       <div>
         <input
           type="text"
           id="nomDeLaNote"
-          style={{
-            position: "relative",
-            left: "2rem",
-            top: "2rem",
-          }}
           //   placeholder="   ajouter un nom a la note...✍"
         />
       </div>
-
       <div className="textAreaContainer">
-        <input
-          type="text"
-          className="textArea"
-          //   placeholder=" Ajouter une note..."
-        />
+        <textarea name="textArea" id="textArea" className="textArea"></textarea>
       </div>
-
       <div className="editSave">
         <button id="editsaved">
           <FaSave />
