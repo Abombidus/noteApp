@@ -18,6 +18,12 @@ function EditNote() {
               <FaArrowAltCircleLeft className="sign" />
             </button>
           </div>
+
+                <div className="editSave">
+        <button id="editsaved">
+          <FaSave />
+        </button>
+      </div>
     
           <h3>Editer la note</h3>
     
@@ -41,12 +47,6 @@ function EditNote() {
               id="textArea"
             ></textarea>
           </div>
-
-      <div className="editSave">
-        <button id="editsaved">
-          <FaSave />
-        </button>
-      </div>
     </>
   );
 }

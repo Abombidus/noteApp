@@ -3,9 +3,10 @@
     position: relative;
     top: 2.5rem;
   }
-  /* body {
-    background: red;
-  } */
+  body {
+    margin:none;
+    padding:none;
+  }
   .textH3 {
     position: relative;
     top: 2.4rem;
@@ -25,8 +26,7 @@
   }
   #editsaved {
     position: relative;
-    right: 26.6rem;
-    top: 4rem;
+    right: 27rem;
   }
 }
 /*  */
@@ -39,8 +39,8 @@
 
 .editSave {
   position: relative;
-  top: 3rem;
-  left: 35rem;
+  /* top: 3rem; */
+  left: 44rem;
 }
 
 #editsaved {

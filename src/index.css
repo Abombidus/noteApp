@@ -20,6 +20,8 @@
 }
 
 body {
+  padding:0;
+  margin:0;
   background: rgb(238, 231, 231);
   font-family: verdana, sans-serif, tahoma;
   transition: var(--transitiion);

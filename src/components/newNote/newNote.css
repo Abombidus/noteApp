@@ -105,7 +105,12 @@ h3 {
   .actions {
     position: relative;
     right: 0.4rem;
-    top: 8rem;
+    top: 4rem;
+  }
+
+  body{
+    margin:0;
+    padding:0;
   }
   h3 {
     position: relative;
