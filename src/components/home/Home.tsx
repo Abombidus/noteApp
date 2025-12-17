@@ -110,7 +110,7 @@ function Home() {
           <input
             className="searchBar"
             type="search"
-            placeholder="🔍 Recherche....."
+            placeholder=" Recherche....."
           />
         </div>
       </div>

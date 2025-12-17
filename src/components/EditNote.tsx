@@ -8,27 +8,40 @@ function EditNote() {
   const navigate = useNavigate();
   return (
     <>
-      <div>
-        <button
-          id="retour"
-          onClick={() => {
-            navigate("/");
-          }}
-        >
-          <FaArrowAltCircleLeft className="sign" />
-        </button>
-      </div>
-      <h3 className="textH3">Editer la note</h3>
-      <div>
-        <input
-          type="text"
-          id="nomDeLaNote"
-          //   placeholder="   ajouter un nom a la note...✍"
-        />
-      </div>
-      <div className="textAreaContainer">
-        <textarea name="textArea" id="textArea" className="textArea"></textarea>
-      </div>
+          <div className="one">
+            <button
+              id="retour"
+              onClick={() => {
+                navigate("/");
+              }}
+            >
+              <FaArrowAltCircleLeft className="sign" />
+            </button>
+          </div>
+    
+          <h3>Editer la note</h3>
+    
+          <div className="two">
+            <input
+              type="text"
+              id="nomDeLaNote"
+            />
+    
+            <button
+              id="btnOk"
+            >
+              ✔
+            </button>
+          </div>
+    
+          <div className="textAreaContainer">
+            <textarea
+              name="textArea"
+              className="textArea"
+              id="textArea"
+            ></textarea>
+          </div>
+
       <div className="editSave">
         <button id="editsaved">
           <FaSave />

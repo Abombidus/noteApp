@@ -8,14 +8,22 @@ import { useNavigate } from "react-router-dom";
 const NewNote = () => {
   const navigate = useNavigate();
   const [active, setActive] = useState(false);
-  const [titre, setTitre] = useState("");
-  const [champ, setChamp] = useState("");
+  let [title, setTitle] = useState("");
+  let [text, setText] = useState("");
 
   function TakeNote() {
     // e.preventDeafault();
+    if (title && text) {
+      const note = {
+        id: navigate,
+        title,
+        text,
+      };
+      console.log(note);
+    }
 
-    console.log("titre:", titre);
-    console.log("champ:", champ);
+    // titre.value = "";
+    // champ.value = "";
   }
   return (
     <>
@@ -40,9 +48,9 @@ const NewNote = () => {
           }}
           type="text"
           onChange={(e) => {
-            setTitre(e.target.value);
+            setTitle(e.target.value);
           }}
-          value={titre}
+          value={title}
           id="nomDeLaNote"
           placeholder="  Nom de la note...✍"
         />
@@ -60,9 +68,9 @@ const NewNote = () => {
       <div className="textAreaContainer">
         <textarea
           onChange={(e) => {
-            setChamp(e.target.value);
+            setText(e.target.value);
           }}
-          value={champ}
+          value={text}
           name="textArea"
           className="textArea"
           id="textArea"

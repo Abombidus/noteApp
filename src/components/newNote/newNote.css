@@ -129,7 +129,9 @@ h3 {
   #nomDeLaNote {
     position: relative;
     top: 4rem;
-    left: 1rem;
+    right:1rem;
+    width:80%;
+    /* left: 1rem; */
   }
   .one {
     position: relative;
@@ -138,17 +140,20 @@ h3 {
 
   .two {
     position: relative;
-    top: 1rem;
+    top: 3.3rem;
+    left:1rem;
     display: flex;
     justify-content: space-between;
   }
   #btnOk {
     position: relative;
-    left: 1rem;
-    top: 4rem;
+    /* left: 1rem; */
+    right:1rem;
+    top: 3rem;
   }
 
   #retour {
+    color:black;
     position: relative;
     right: 1.8rem;
     /* bottom: 3rem; */
