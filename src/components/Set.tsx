@@ -3,12 +3,12 @@ import { FaEdit } from "react-icons/fa";
 import { MdAutoDelete } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
-const now = new Date();
-const hrs = now.getHours();
-const mins = now.getMinutes();
-const secs = now.getSeconds();
-const schema = `${hrs}:${mins}:${secs}`;
-const voir = "voir plus";
+const now :string= new Date();
+const hrs :string= now.getHours();
+const mins :string= now.getMinutes();
+const secs :string= now.getSeconds();
+const schema :string = `${hrs}:${mins}:${secs}`;
+const voir :string= "voir plus";
 
 // const task = [
 //   {
