@@ -1,56 +1,98 @@
 // import React from "react";
-// import { FaExchangeAlt } from "react-icons/fa";
-const notes = [
-  {
-    id: 1,
-    title: "The boy that fall on th e ground",
-    details:
-      "The boy is runnin and he fall on the ground and then start crying and the mother came and carry him up to see th injured the boy had but he wall not injured",
-    date: "6/JAN/2023",
-  },
+import { FaEdit } from "react-icons/fa";
+import { MdAutoDelete } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
-  {
-    id: 2,
-    title: "The boy that fall on th e ground",
-    details:
-      "The boy is runnin and he fall on the ground and then start crying and the mother came and carry him up to see th injured the boy had but he wall not injured",
-    date: "6/JAN/2023",
-  },
-  {
-    id: 3,
-    title: "The boy that fall on th e ground",
-    details:
-      "The boy is runnin and he fall on the ground and then start crying and the mother came and carry him up to see th injured the boy had but he wall not injured",
-    date: "6/JAN/2023",
-  },
-  {
-    id: 4,
-    title: "The boy that fall on th e ground",
-    details:
-      "The boy is runnin and he fall on the ground and then start crying and the mother came and carry him up to see th injured the boy had but he wall not injured",
-    date: "6/JAN/2023",
-  },
-  {
-    id: 5,
-    title: "The boy that fall on th e ground",
-    details:
-      "The boy is runnin and he fall on the ground and then start crying and the mother came and carry him up to see th injured the boy had but he wall not injured",
-    date: "6/JAN/2023",
-  },
-];
+const now = new Date();
+const hrs = now.getHours();
+const mins = now.getMinutes();
+const secs = now.getSeconds();
+const schema = `${hrs}:${mins}:${secs}`;
+const voir = "voir plus";
+
+// const task = [
+//   {
+//     id: 1,
+//     title: "One",
+//     date: `${schema}`,
+//     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     sed deleniti libero qui harum perspiciatisaut? Nam sequi itaque dolore similique culpa? Lorem ipsum dolor sit amet consectetur adipisicing elit.Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum, sed deleniti libero qui harum perspiciatisaut? Nam sequi itaque dolore similique culpa? Lorem ipsum dolor sit amet consectetur adipisicing elit.Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum, sed deleniti libero qui harum perspiciatisaut? Nam sequi itaque dolore similique culpa?",
+//   },`,
+//   },
+//   {
+//     id: 2,
+//     title: "Two",
+//     date: `${schema}`,
+//     text: " Lorem ipsum dolor sit amet consectetur adipisicing elit.Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum, sed deleniti libero qui harum perspiciatisaut? Nam sequi itaque dolore similique culpa?",
+//   },
+//   {
+//     id: 3,
+//     title: "Three",
+//     date: `${schema}`,
+//     text: " Lorem ipsum dolor sit amet consectetur adipisicing elit.Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum, sed deleniti libero qui harum perspiciatisaut? Nam sequi itaque dolore similique culpa?",
+//   },
+//   {
+//     id: 4,
+//     title: "Four",
+//     date: `${schema}`,
+//     text: ` Lorem ipsum dolor sit amet consectetur ad.Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum, ipisicing elit.Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum, sed deleniti libero qui harum perspiciatisaut? Nam sequi itaque dolore similique culpa?`,
+//   },
+//   {
+//     id: 5,
+//     title: "Five",
+//     date: `${schema}`,
+//     text: " Lorem ipsum dolor sit amet consectetur adipisicing elit.Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum, sed deleniti libero qui harum perspiciatisaut? Nam sequi itaque dolore similique culpa?",
+//   },
+//   {
+//     id: 6,
+//     title: "Six",
+//     date: `${schema}`,
+//     text: " Lorem ipsum dolor sit amet consectetur adipisicing elit.Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum, sed deleniti libero qui harum perspiciatisaut? Nam sequi itaque dolore similique culpa?",
+//   },
+//   {
+//     id: 7,
+//     title: "Seven",
+//     date: `${schema}`,
+//     text: `.Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
+//     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum, Lorem ipsum dolor sit amet consectetur adipisicing elit.Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum, sed deleniti libero qui harum perspiciatisaut? Nam sequi itaque dolore similique culpa?`,
+//   },
+// ];
 
 function Set() {
+  const navigate = useNavigate();
   return (
     <>
-      {notes.map(({ id, title, details, date }) => {
-        return (
-          <div key={id}>
-            <p>{title}</p>
-            <p>{details}</p>
-            <h3>{date}</h3>
-          </div>
-        );
-      })}
+      <h1>Hello JavaScript</h1>
     </>
   );
 }

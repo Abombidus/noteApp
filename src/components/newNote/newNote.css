@@ -10,6 +10,7 @@ h3 {
   background: var(--color-white);
   height: 25px;
   width: 23px;
+  color: black;
 }
 .sign {
   position: relative;
@@ -108,9 +109,9 @@ h3 {
     top: 4rem;
   }
 
-  body{
-    margin:0;
-    padding:0;
+  body {
+    margin: 0;
+    padding: 0;
   }
   h3 {
     position: relative;
@@ -134,8 +135,8 @@ h3 {
   #nomDeLaNote {
     position: relative;
     top: 4rem;
-    right:1rem;
-    width:80%;
+    right: 1rem;
+    width: 80%;
     /* left: 1rem; */
   }
   .one {
@@ -146,19 +147,19 @@ h3 {
   .two {
     position: relative;
     top: 3.3rem;
-    left:1rem;
+    left: 1rem;
     display: flex;
     justify-content: space-between;
   }
   #btnOk {
     position: relative;
     /* left: 1rem; */
-    right:1rem;
+    right: 1rem;
     top: 3rem;
   }
 
   #retour {
-    color:black;
+    color: black;
     position: relative;
     right: 1.8rem;
     /* bottom: 3rem; */

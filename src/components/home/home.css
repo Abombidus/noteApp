@@ -46,20 +46,21 @@ h3 {
 
 .contenu {
   display: flex;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
-.contenu::after {
+/* .contenu::after {
   content: "";
   width: 1%;
   position: relative;
-  top: 2rem;
+  top: 10rem;
   height: 1px;
   color: black;
   background: black;
-}
+} */
 fieldset {
   border-radius: 1rem;
-  padding-bottom: 0.4rem;
+  padding-bottom: 0.5rem;
+  /* padding-top: 0.5rem; */
 }
 legend {
   font-size: x-large;
@@ -81,16 +82,26 @@ h5::after {
   position: relative;
   overflow: hidden;
   padding-bottom: 1.5rem;
+  /* padding-right: 8rem; */
   top: 0.7rem;
+  /* overflow: hidden; */
 }
+/* text::after {
+  content: "|";
+  background: black;
+  height: 200px;
+  width: 10%;
+  position: relative;
+  right: 20rem;
+} */
 /* Boutons  */
 #editTaskBtn {
   background: var(--color-blue);
 }
 
 .separation {
-  position: relative;
-  bottom: 1.2rem;
+  width: 99%;
+  box-shadow: 0.5px 0.5px 0.5px var(--color-gray);
 }
 
 #deleteTaskBtn {
@@ -106,23 +117,32 @@ h5::after {
 
 .timeDiv {
   position: relative;
-  left: 52rem;
+  top: 0.7rem;
+  left: 61rem;
+  /* margin: 1rem; */
+  display: block;
+  /* margin-left: 2px; */
 }
 .time {
-  font-size: 12px;
+  display: flex;
+  font-size: 7.6px;
   position: relative;
-  left: 7rem;
-  bottom: 1.5rem;
+  left: 6rem;
+  bottom: 1rem;
 }
 
 .btns {
   display: flex;
   height: 50px;
   background: rgb(221, 217, 217);
-  padding: 0.7rem;
+  padding: 0.4rem;
   border: 2px solid transparent;
   border-radius: 23px;
   position: relative;
+  /* right: 1rem; */
+  top: 2rem;
+  /* margin-left: 5rem; */
+  /* z-index: 0; */
 }
 
 /* Phone Query */
@@ -218,7 +238,7 @@ h5::after {
   }
   .timeDiv {
     position: relative;
-    left: 5rem;
+    left: 6rem;
     width: 90%;
     top: 1.9rem;
     font-size: 7px;

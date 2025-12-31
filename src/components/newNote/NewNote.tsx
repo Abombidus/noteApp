@@ -5,26 +5,43 @@ import { FaArrowAltCircleLeft, FaFileImport } from "react-icons/fa";
 import { FaSave } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-const NewNote = () => {
+// const recuperationDeText = useRef("");
+const NewNote = ({ setInfos }) => {
+  // const userInput = useRef("");
   const navigate = useNavigate();
-  const [active, setActive] = useState(false);
-  let [title, setTitle] = useState("");
-  let [text, setText] = useState("");
 
-  function TakeNote() {
-    // e.preventDeafault();
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth();
+  const day = now.getDay();
+  const hrs = now.getHours();
+  const mins = now.getMinutes();
+  const secs = now.getSeconds();
+  const schema = `${day}/${month}/${year} (${hrs}h:${mins}:${secs})`;
+  // const [uniqueNum, setUniqueNum] = useState(0);
+  const [active, setActive] = useState(false);
+  const [title, setTitle] = useState("");
+  const [text, setText] = useState("");
+
+  function TakeNote(e) {
+    e.preventDefault();
     if (title && text) {
       const note = {
-        id: navigate,
-        title,
-        text,
+        id: Date.now(),
+        title: title,
+        text: text,
+        date: `${schema}`,
+        // date:{infos.date}
       };
-      console.log(note);
-    }
 
-    // titre.value = "";
-    // champ.value = "";
+      setInfos((prev) => [note, ...prev]);
+      console.log(note);
+      navigate("/");
+    }
+    setTitle("");
+    setText("");
   }
+
   return (
     <>
       <div className="one">

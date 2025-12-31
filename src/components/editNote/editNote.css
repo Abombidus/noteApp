@@ -4,8 +4,8 @@
     top: 2.5rem;
   }
   body {
-    margin:none;
-    padding:none;
+    margin: none;
+    padding: none;
   }
   .textH3 {
     position: relative;
@@ -48,6 +48,9 @@
   background: var(--color-green);
   font-size: 35px;
   padding: 0;
+  left: 25rem;
+  top: 7rem;
+  position: relative;
 }
 #editsaved:active {
   background: var(--color-green2);
