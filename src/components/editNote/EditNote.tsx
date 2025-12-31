@@ -6,9 +6,9 @@ import "./editNote.css";
 function EditNote({ infos, setInfos }) {
   const navigate = useNavigate();
   const { id } = useParams();
-  const note = infos.find((item) => {
-    item.id == id;
-  });
+  // const note = infos.find((item) => {
+  //   item.id == id;
+  // });
   // const [title, setTitle] = useState(note.title);
   // const [text, setText] = useState(note.text);
   // console.log(note);
