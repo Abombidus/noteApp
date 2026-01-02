@@ -1,7 +1,7 @@
-import NewNote from "../src/components/newNote/NewNote";
-import Home from "../src/components/home/Home";
+import NewNote from "./components/newNote/NewNote";
+import Home from "./components/home/Home";
 import EditNote from "./components/editNote/EditNote";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import { useState, useEffect } from "react";
 // import { js } from "@eslint/js";
 // import Set from "./components/Set";
@@ -11,37 +11,23 @@ import { useState, useEffect } from "react";
 const now = new Date();
 const year = now.getFullYear();
 const month = now.getMonth();
-const day = now.getDay();
+const day = now.getDate();
 const hrs = now.getHours();
 const mins = now.getMinutes();
 const secs = now.getSeconds();
-const schema: string = `${day}/${month}/${year} (${hrs}h:${mins}:${secs})`;
+const schema: string = `${day}/${month + 1}/${year} (${hrs}h:${mins}:${secs})`;
 
 function App() {
-  const [infos, setInfos] = useState(
-    JSON.parse(localStorage.getItem("note")) || [
+  const [infos, setInfos] = useState<any>(
+    JSON.parse(localStorage.getItem("note") || "[]") || [
       {
         id: 1,
         title: "One",
         date: `${schema}`,
-        text: `Lorem ipsum dolor sit amet consectetur adipisicing elit
-    .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-    .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-    .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-    .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-    .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-    .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-    .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-    .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-    .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-    .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-    .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-    .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-    .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-    .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-    .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-    sed deleniti libero qui harum perspiciatisaut? Nam sequi itaque dolore similique culpa? Lorem ipsum dolor sit amet consectetur adipisicing elit.Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum, sed deleniti libero qui harum perspiciatisaut? Nam sequi itaque dolore similique culpa? Lorem ipsum dolor sit amet consectetur adipisicing elit.Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum, sed deleniti libero qui harum perspiciatisaut? Nam sequi itaque dolore similique culpa?",
-  `,
+        text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Nostrum expedita deserunt, dolor accusamus sint maxime nihil laborum.
+Sed deleniti libero qui harum perspiciatis aut? Nam sequi itaque dolore similique culpa?
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum expedita deserunt, dolor accusamus sint maxime nihil laborum.`,
       },
 
       {
@@ -91,18 +77,20 @@ function App() {
   );
 
   useEffect(() => {
-    localStorage.setItem("note", JSON.parse(infos));
+    localStorage.setItem("note", JSON.stringify(infos));
   }, [infos]);
   return (
     <main id="app">
-      <Routes>
-        <Route path="/newNote" element={<NewNote setInfos={setInfos} />} />
-        <Route path="/" element={<Home infos={infos} />} />
-        <Route
-          path="/editNote/:id"
-          element={<EditNote infos={infos} setInfos={setInfos} />}
-        />
-      </Routes>
+      <HashRouter>
+        <Routes>
+          <Route path="/newNote" element={<NewNote setInfos={setInfos} />} />
+          <Route path="/" element={<Home infos={infos} />} />
+          <Route
+            path="/editNote/:id"
+            element={<EditNote infos={infos} setInfos={setInfos} />}
+          />
+        </Routes>
+      </HashRouter>
     </main>
   );
 }
