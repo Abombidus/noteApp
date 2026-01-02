@@ -8,18 +8,18 @@ import { useState, useEffect } from "react";
 
 // const notes = require("./components/echantillon");
 
-const now :string= new Date();
-const year:string = now.getFullYear();
-const month:string = now.getMonth();
-const day:string = now.getDay();
-const hrs:string = now.getHours();
-const mins:string = now.getMinutes();
-const secs:string = now.getSeconds();
-const schema :string= `${day}/${month}/${year} (${hrs}h:${mins}:${secs})`;
+const now = new Date();
+const year = now.getFullYear();
+const month = now.getMonth();
+const day = now.getDay();
+const hrs = now.getHours();
+const mins = now.getMinutes();
+const secs = now.getSeconds();
+const schema: string = `${day}/${month}/${year} (${hrs}h:${mins}:${secs})`;
 
 function App() {
   const [infos, setInfos] = useState(
-    JSON.parse(localStorage.getItem("note")) || [
+    JSON.parse(localStorage.getItem("note")) && [
       // {
       //   id: `${now}`,
       //   title: "One",

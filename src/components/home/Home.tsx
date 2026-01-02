@@ -3,16 +3,16 @@ import { FaEdit } from "react-icons/fa";
 import { MdAutoDelete } from "react-icons/md";
 import "./home.css";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 
 // const now = new Date();
 // const hrs = now.getHours();
 // const mins = now.getMinutes();
 // const secs = now.getSeconds();
 // const schema = `${hrs}:${mins}:${secs}`;
-const voir = "voir plus";
+// const voir = "voir plus";
 
-function Home({ infos }) {
+function Home({ infos }: any) {
   // const [note, setNote] = useState([
   //   {
   //     id: 1,
@@ -56,7 +56,7 @@ function Home({ infos }) {
             <fieldset>
               <legend>Liste de note</legend>
 
-              {infos.map(({ id, title, date, text }) => {
+              {infos.map(({ id, title, date, text }: any) => {
                 return (
                   <div>
                     <div className="contenu" key={id}>

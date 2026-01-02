@@ -6,7 +6,7 @@ import { FaSave } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 // const recuperationDeText = useRef("");
-const NewNote = ({ setInfos }) => {
+const NewNote = ({ setInfos }: any) => {
   // const userInput = useRef("");
   const navigate = useNavigate();
 
@@ -23,7 +23,7 @@ const NewNote = ({ setInfos }) => {
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
 
-  function TakeNote(e) {
+  function TakeNote(e: any) {
     e.preventDefault();
     if (title && text) {
       const note = {
@@ -34,7 +34,7 @@ const NewNote = ({ setInfos }) => {
         // date:{infos.date}
       };
 
-      setInfos((prev) => [note, ...prev]);
+      setInfos((prev: any) => [note, ...prev]);
       console.log(note);
       navigate("/");
     }

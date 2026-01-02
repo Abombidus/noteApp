@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FaSave } from "react-icons/fa";
 import "./editNote.css";
 
-function EditNote({ infos, setInfos }) {
+function EditNote() {
   const navigate = useNavigate();
   // const { id } = useParams();
   // const note = infos.find((item) => {
@@ -19,9 +19,7 @@ function EditNote({ infos, setInfos }) {
   return (
     <>
       <div className="one">
-        <button
-          id="retour"
-        >
+        <button id="retour">
           <FaArrowAltCircleLeft className="sign" />
         </button>
       </div>
@@ -35,20 +33,13 @@ function EditNote({ infos, setInfos }) {
       <h3>Editer la note</h3>
 
       <div className="two">
-        <input
-          type="text"
-          id="nomDeLaNote"
-        />
+        <input type="text" id="nomDeLaNote" />
 
         <button id="btnOk">✔</button>
       </div>
 
       <div className="textAreaContainer">
-        <textarea
-          name="textArea"
-          className="textArea"
-          id="textArea"
-        ></textarea>
+        <textarea name="textArea" className="textArea" id="textArea"></textarea>
       </div>
     </>
   );
