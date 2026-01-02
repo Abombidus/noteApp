@@ -19,19 +19,7 @@ const schema: string = `${day}/${month}/${year} (${hrs}h:${mins}:${secs})`;
 
 function App() {
   const [infos, setInfos] = useState(
-    JSON.parse(localStorage.getItem("note")) && [
-      // {
-      //   id: `${now}`,
-      //   title: "One",
-      //   date: `${schema}`,
-      //   text: `Lorem ipsum
-      //          .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-      //     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-      //     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-      //     .Nostrum expedita deserunt, dolor accusamus sint maximenihil laborum,
-      //     .Nostrum expedita deserunt, do dolor sit amet consectetur adipisicing `,
-      // },
-
+    JSON.parse(localStorage.getItem("note")) || [
       {
         id: 1,
         title: "One",
