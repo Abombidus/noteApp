@@ -1,11 +1,11 @@
 import { FaArrowAltCircleLeft } from "react-icons/fa";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FaSave } from "react-icons/fa";
 import "./editNote.css";
 
 function EditNote({ infos, setInfos }) {
   const navigate = useNavigate();
-  const { id } = useParams();
+  // const { id } = useParams();
   // const note = infos.find((item) => {
   //   item.id == id;
   // });
