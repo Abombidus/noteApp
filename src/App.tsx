@@ -18,7 +18,7 @@ const secs = now.getSeconds();
 const schema: string = `${day}/${month + 1}/${year} (${hrs}h:${mins}:${secs})`;
 
 function App() {
-  const [infos, setInfos] = useState<any>(
+  const [infos, setInfos] = useState(
     JSON.parse(localStorage.getItem("note") || "[]") || [
       {
         id: 1,
